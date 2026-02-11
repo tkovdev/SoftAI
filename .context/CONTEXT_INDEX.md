@@ -23,9 +23,12 @@
 ## 📁 Documentation Map
 
 ### Context Management (.context/)
-- **[PROJECT_STATE.md](.context/PROJECT_STATE.md)** - ⭐ START HERE - Current project state
+- **[PROJECT_STATE.md](.context/PROJECT_STATE.md)** - ⭐ START HERE - Current project state, sprint, delegations
+- **[SPRINT_TRACKER.md](.context/SPRINT_TRACKER.md)** - 🏃 Sprint backlog, progress, and metrics
 - **[WORK_LOG.md](.context/WORK_LOG.md)** - Session history, what's been done
 - **[AGENT_HANDOFF_PROTOCOL.md](.context/AGENT_HANDOFF_PROTOCOL.md)** - How to hand off work between agents
+- **[AGENT_WORKFLOW_GUIDE.md](.context/AGENT_WORKFLOW_GUIDE.md)** - Complete workflow including delegation and escalation
+- **[DELEGATION_ESCALATION_FLOWS.md](.context/DELEGATION_ESCALATION_FLOWS.md)** - 📊 Visual diagrams of collaboration patterns
 - **[CONTEXT_INDEX.md](.context/CONTEXT_INDEX.md)** - This file
 
 ### Architecture Decisions (docs/adr/)
@@ -44,6 +47,30 @@
 
 ### "I need to understand current status"
 → Read: [PROJECT_STATE.md](.context/PROJECT_STATE.md)
+
+### "I need to see current sprint and backlog"
+→ Read: [SPRINT_TRACKER.md](.context/SPRINT_TRACKER.md)
+→ Quick view: PROJECT_STATE.md → Current Sprint section
+
+### "I need to pick up a task from the sprint"
+→ Read: [SPRINT_TRACKER.md - Sprint 0 Backlog](.context/SPRINT_TRACKER.md#-sprint-0-backlog)
+→ Update task status: ⬜ → 🟡
+→ Update: PROJECT_STATE.md → Active Work
+
+### "I need to delegate to another agent"
+→ Read: [AGENT_WORKFLOW_GUIDE.md - Agent-to-Agent Delegation](.context/AGENT_WORKFLOW_GUIDE.md#-agent-to-agent-delegation)  
+→ Visual: [DELEGATION_ESCALATION_FLOWS.md](.context/DELEGATION_ESCALATION_FLOWS.md)  
+→ Update: PROJECT_STATE.md → Pending Delegations section
+
+### "I disagree with another agent"
+→ Read: [AGENT_WORKFLOW_GUIDE.md - Conflict Resolution](.context/AGENT_WORKFLOW_GUIDE.md#️-conflict-resolution--escalation)  
+→ Visual: [Escalation Flow Diagram](.context/DELEGATION_ESCALATION_FLOWS.md#️-escalation-flow-conflict-resolution)  
+→ Update: PROJECT_STATE.md → Active Discussions section
+
+### "I need to escalate a decision"
+→ Read: [Decision-Making Authority Levels](.context/AGENT_WORKFLOW_GUIDE.md#decision-making-authority-levels)  
+→ Visual: [Decision Authority Matrix](.context/DELEGATION_ESCALATION_FLOWS.md#-decision-authority-matrix)  
+→ Update: PROJECT_STATE.md → Blockers section with escalation format
 
 ### "I need to see what's been completed"
 → Read: [WORK_LOG.md](.context/WORK_LOG.md)

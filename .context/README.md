@@ -22,12 +22,14 @@ This directory contains the context management system that enables:
 
 Read this first, every session. Contains:
 - Current focus and active work
+- Pending delegations between agents
+- Active discussions and collaboration
 - Project status summary
 - Recent decisions (with ADR links)
-- Current blockers
+- Current blockers and escalations
 - Next agent handoff information
 
-**Update this**: Start of session (claim work) and end of session (status + handoff)
+**Update this**: Start of session (claim work), during work (delegations/discussions), and end of session (status + handoff)
 
 ---
 
@@ -80,10 +82,45 @@ Comprehensive guide covering:
 - Phase 1: Session Start (loading context efficiently)
 - Phase 2: Work Execution (doing the work)
 - Phase 3: Session End (documentation and handoff)
+- Agent-to-agent delegation protocols
+- Conflict resolution and escalation paths
+- Decision-making authority levels (Agent → Peer → Lead → Human)
 - Agent coordination patterns
 - Best practices and common pitfalls
 
-**Read this**: When onboarding or when workflow is unclear
+**Read this**: When onboarding, need delegation guidance, or workflow is unclear
+
+---
+
+### [DELEGATION_ESCALATION_FLOWS.md](DELEGATION_ESCALATION_FLOWS.md) 📊
+**Visual diagrams and quick reference for agent collaboration**
+
+Visual reference covering:
+- Delegation flow diagram (agent-to-agent requests)
+- Escalation flow diagram (conflict resolution)
+- Decision authority matrix (what to decide vs escalate)
+- Collaboration pattern diagrams
+- Time-boxing guidelines
+- Quick reference checklists
+
+**Read this**: When you need to delegate work, resolve disagreements, or escalate decisions
+
+---
+
+### [SPRINT_TRACKER.md](SPRINT_TRACKER.md) 🏃
+**Agile sprint planning, backlog, and progress tracking**
+
+Manages sprints covering:
+- Current sprint goals and progress
+- Sprint backlog with user stories and tasks
+- Story point estimation and velocity tracking
+- Task prioritization (P0 blocking → P3 nice-to-have)
+- Sprint ceremonies and definitions (DoR/DoD)
+- Integration with PROJECT_STATE for active work
+
+**Read this**: At sprint start, when planning work, or checking what to work on next
+
+**Update this**: When task status changes, at end of sprint, during sprint planning
 
 ---
 

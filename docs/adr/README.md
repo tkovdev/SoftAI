@@ -74,6 +74,14 @@ Format: `NNN-topic-brief-description.md`
 
 - **[001-backend-cqrs-with-mediatr.md](001-backend-cqrs-with-mediatr.md)** - Use CQRS pattern with MediatR for backend business logic (Status: Accepted, Example)
 
+### Pending Review
+
+- **[002-csharp-coding-standards.md](002-csharp-coding-standards.md)** - C# naming conventions, StyleCop rules, async/await patterns (Status: Proposed)
+- **[003-typescript-angular-coding-standards.md](003-typescript-angular-coding-standards.md)** - TypeScript, Angular 21 standalone components, signals, PrimeNG (Status: Proposed)
+- **[004-error-handling-strategy.md](004-error-handling-strategy.md)** - Result<T> pattern, RFC 7807 Problem Details, global exception handling (Status: Proposed)
+- **[005-logging-strategy.md](005-logging-strategy.md)** - Serilog structured logging, log levels, what to log (Status: Proposed)
+- **[006-technology-stack.md](006-technology-stack.md)** - .NET 10, Angular 21, SQL Server 2022, package versions (Status: Proposed)
+
 ### Superseded Decisions
 
 (None yet)

@@ -104,6 +104,33 @@ SoftAI/
 
 ## 🚀 Getting Started
 
+### For Stakeholders & Product Owners
+
+**Starting Sprint 0 (Foundation)?**
+
+1. **Read** [Sprint 0 Collaboration Guide](.context/SPRINT_0_COLLABORATION_GUIDE.md)
+   - Understand what decisions are needed
+   - See the collaborative workflow options
+   - Review open questions that need your input
+
+2. **Answer Key Questions**:
+   - Database preference (PostgreSQL/SQL Server)
+   - Any existing coding standards to follow
+   - Logging infrastructure requirements
+   - Technology version constraints
+
+3. **Review & Approve ADRs** as they're drafted
+   - Each ADR explains options and trade-offs
+   - Provide feedback or approval
+   - Your input shapes the foundation
+
+4. **Monitor Progress**:
+   - Check [PROJECT_STATE.md](.context/PROJECT_STATE.md) for current status
+   - Review [SPRINT_TRACKER.md](.context/SPRINT_TRACKER.md) for backlog and velocity
+   - Participate in sprint reviews
+
+---
+
 ### For AI Agents
 
 **Starting a new work session:**
