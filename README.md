@@ -56,8 +56,9 @@ This project provides a complete system for developing web applications using AI
 
 ## 📁 Project Structure
 
+### SoftAI/ - Agent System & Documentation
 ```
-SoftAI/
+SoftAI/                                 # Agent system (this repository)
 ├── .context/                           # Context management system
 │   ├── PROJECT_STATE.md                # ⭐ Current project state (START HERE)
 │   ├── WORK_LOG.md                     # Session history
@@ -79,26 +80,41 @@ SoftAI/
 │   ├── api-designer.agent.md           # API design specialist
 │   └── documentation.agent.md          # Documentation specialist
 │
-├── docs/                               # Documentation
+├── docs/                               # Architectural documentation
 │   ├── adr/                            # Architecture Decision Records
 │   │   ├── README.md                   # ADR index and guidelines
 │   │   ├── TEMPLATE.md                 # ADR template
-│   │   └── 001-backend-cqrs-with-mediatr.md # Example ADR
-│   ├── api/                            # API documentation (OpenAPI specs)
-│   └── guides/                         # Developer guides
+│   │   └── 001-012-*.md                # All architectural decisions
+│   └── guides/                         # System guides
 │
-├── src/                                # Source code (to be created)
+└── README.md                           # This file
+```
+
+### SoftAI-Example/ - Example Application Code
+```
+SoftAI-Example/                         # Example application (separate workspace)
+├── src/                                # Source code
 │   ├── [Project].API/                  # Web API project
 │   ├── [Project].Core/                 # Domain entities
 │   ├── [Project].Application/          # Business logic (CQRS)
 │   └── [Project].Infrastructure/       # Data access, external services
 │
-├── tests/                              # Tests (to be created)
+├── tests/                              # Tests
 │   ├── [Project].UnitTests/            # Unit tests
 │   └── [Project].IntegrationTests/     # Integration tests
 │
-└── README.md                           # This file
+├── frontend/                           # Angular application
+│   ├── src/
+│   │   ├── app/                        # Application code
+│   │   └── assets/                     # Static assets
+│   └── angular.json                    # Angular workspace config
+│
+├── .github/workflows/                  # CI/CD pipelines
+├── docker-compose.yml                  # Local development environment
+└── README.md                           # Application documentation
 ```
+
+**Note**: The agent system (SoftAI) and example application (SoftAI-Example) are kept in separate workspace folders for clear separation of concerns.
 
 ---
 

@@ -9,7 +9,14 @@
 
 ## 📢 Recent Changes
 
-**2026-02-10 - Sprint 0 Complete - All ADRs Created**:
+**2026-02-10 - Code Location Established**:
+- ✅ Decided application code will reside in `SoftAI-Example/` workspace folder
+- ✅ Updated PROJECT_STATE.md and README.md with new structure
+- 📍 SoftAI/ contains agent system and architectural documentation
+- 📍 SoftAI-Example/ will contain the actual application code
+- **Next**: Define product concept and scaffold SoftAI-Example/ workspace
+
+**2026-02-10 - Sprint 0 Complete - All ADRs Created** (Earlier):
 - ✅ Created ADR-007: Authentication & Authorization Strategy (Azure AD SSO, MSAL for Angular)
 - ✅ Created ADR-008: API Design Standards (RESTful, versioning, pagination, RFC 7807)
 - ✅ Created ADR-009: Database Migration Strategy (EF Core migrations, deployment)
@@ -80,13 +87,16 @@ All architectural ADRs completed and approved:
 11. ✅ ADR-012 (Angular State Management)
 
 ### Next Steps (Sprint 1)
-**Remaining before requirements gathering**:
-1. ⬜ Project scaffolding (solution structure, projects, folders)
-2. ⬜ Development environment setup (Docker, configs, .gitignore)
-3. ⬜ Requirements templates for Product Manager Agent
-4. ⬜ CI/CD foundation (basic GitHub Actions workflows)
+**Application Code Location**: All application code will be developed in the `SoftAI-Example/` workspace folder, keeping the agent system (`SoftAI/`) separate from the example application.
 
-**Then ready for**: Requirements elicitation and product development
+**Remaining before requirements gathering**:
+1. ⬜ Define what application we're building (product concept)
+2. ⬜ Project scaffolding in SoftAI-Example/ (solution structure, projects, folders)
+3. ⬜ Development environment setup (Docker, configs, .gitignore)
+4. ⬜ Requirements templates for Product Manager Agent
+5. ⬜ CI/CD foundation (basic GitHub Actions workflows)
+
+**Then ready for**: Requirements elicitation and feature development
 
 ---
 
@@ -136,6 +146,7 @@ _No active discussions currently_
 - **Type**: Web Application
 - **Stack**: C# .NET (Backend) + Angular 21 (Frontend)
 - **Architecture**: Clean Architecture with CQRS pattern
+- **Code Location**: `/SoftAI-Example/` workspace folder (separate from agent system)
 
 ### Status Summary
 - **Backend**: Not started (awaiting requirements)
