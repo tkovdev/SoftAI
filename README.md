@@ -65,6 +65,7 @@ SoftAI/                                 # Framework (this repository)
 ├── .github/agents/                     # AI agent specifications
 │   ├── instructor.agent.md             # Meta-agent
 │   ├── lead-software-engineer.agent.md # Orchestrator
+│   ├── project-analyst.agent.md        # Project state analysis specialist
 │   ├── backend-developer.agent.md      # Backend specialist
 │   ├── frontend-developer.agent.md     # Frontend specialist
 │   ├── database-engineer.agent.md      # Database specialist
@@ -154,22 +155,27 @@ SoftAI-Example/                         # Project implementation
 
 **Starting Work on a Project?**
 
-1. **Read Framework Registry** (2 min)
+1. **Get Quick Briefing** (2 min) - *Recommended for fast onboarding*
+   - Request briefing from **Project Analyst Agent**
+   - Get current state, progress, blockers, and next steps
+   - Receive role-specific context for your work
+
+2. **Read Framework Registry** (2 min) - *Alternative: Manual onboarding*
    - Open [.context/PROJECT_STATE.md](.context/PROJECT_STATE.md)
    - Find your project in Active Projects list
    - Note project folder location
 
-2. **Navigate to Project** (3 min)
+3. **Navigate to Project** (3 min)
    - Go to project workspace folder
    - Read project's `PROJECT_STATE.md`
    - Review current sprint plan
 
-3. **Review Standards** (10-15 min)
+4. **Review Standards** (10-15 min)
    - Read ADRs relevant to your work area (see [docs/adr/README.md](docs/adr/README.md))
    - Review your agent definition in [.github/agents/](.github/agents/)
    - Check workflow templates if needed
 
-4. **Start Working**
+5. **Start Working**
    - Follow project's sprint backlog
    - Update project context (not framework)
    - Use framework workflows for collaboration
@@ -246,6 +252,13 @@ SoftAI-Example/                         # Project implementation
 - Delegates work to specialized agents
 - Makes architectural decisions
 - Coordinates team
+
+**Project Analyst** (Analysis & Reporting)
+- Analyzes current project state and progress
+- Provides quick briefings for agents after context switches
+- Identifies gaps between planned and actual implementation
+- Generates status reports for stakeholders
+- Monitors sprint progress and blockers
 
 **Specialized Development Agents:**
 - **Backend Developer**: .NET/C# with CQRS pattern
