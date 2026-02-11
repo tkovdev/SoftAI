@@ -1,6 +1,6 @@
 # ADR-006: Technology Stack and Versions
 
-**Status**: Draft (Pending Review)  
+**Status**: Accepted  
 **Date**: 2026-02-10  
 **Decision Makers**: Lead Software Engineer, Stakeholder  
 **Supersedes**: N/A
@@ -41,7 +41,7 @@ We will use the following technology stack with these specific versions:
 | **Serilog** | **4.x** (latest stable) | Structured logging library |
 | **Serilog.AspNetCore** | **8.x** (latest stable) | ASP.NET Core integration |
 | **AutoMapper** | **13.x** (latest stable) | Object-to-object mapping (optional use) |
-| **xUnit** | **2.6.x** (latest stable) | Unit testing framework |
+| **MSTest** | **2.6.x** (latest stable) | Unit testing framework |
 | **Moq** | **4.20.x** (latest stable) | Mocking library for tests |
 | **FluentAssertions** | **6.x** (latest stable) | Assertion library for tests |
 | **SQL Server** | **2022** (or **2019**) | Relational database, stakeholder choice |
@@ -151,8 +151,8 @@ We will use the following technology stack with these specific versions:
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
-    <PackageReference Include="xUnit" Version="2.6.*" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.*">
+    <PackageReference Include="MSTest.TestFramework" Version="3.*" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.*">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

@@ -1,6 +1,6 @@
 # ADR-003: TypeScript/Angular Coding Standards
 
-**Status**: Draft (Pending Review)  
+**Status**: Accepted  
 **Date**: 2026-02-10  
 **Decision Makers**: Lead Software Engineer, Stakeholder  
 **Supersedes**: N/A
