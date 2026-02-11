@@ -207,7 +207,7 @@ At end of sprint, verify:
 - [ ] Documentation updated
 - [ ] Sprint review conducted
 - [ ] Sprint retrospective completed
-- [ ] Metrics recorded in SPRINT_TRACKER.md
+- [ ] Metrics recorded in sprints/SPRINT_TRACKER.md
 - [ ] Incomplete tasks moved to next sprint backlog
 - [ ] Lessons learned documented
 

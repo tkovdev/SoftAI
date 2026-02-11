@@ -19,7 +19,7 @@ Enable any agent to:
 ### Before Starting Work
 
 - [ ] Read `PROJECT_STATE.md` for current state
-- [ ] Check `WORK_LOG.md` for recent sessions
+- [ ] Check `archive/WORK_LOG.md` for recent sessions
 - [ ] Review `CONTEXT_INDEX.md` for relevant documentation
 - [ ] Read recent ADRs (if making architectural decisions)
 - [ ] Check for blockers or open questions
@@ -36,7 +36,7 @@ Enable any agent to:
 ### After Completing Work
 
 - [ ] Update `PROJECT_STATE.md` with new status
-- [ ] Add session entry to `WORK_LOG.md`
+- [ ] Add session entry to `archive/WORK_LOG.md`
 - [ ] Create/update ADRs for architectural decisions
 - [ ] Update `CONTEXT_INDEX.md` if new concepts introduced
 - [ ] Prepare handoff section in PROJECT_STATE.md
@@ -74,7 +74,7 @@ When completing work, update PROJECT_STATE.md → "Next Agent Handoff" section:
 2. **CONTEXT_INDEX.md** (2 min) - Map of documentation
 3. **Relevant ADRs** (10 min) - Only ADRs related to current work
 4. **Specific Code Files** (as needed) - Only files being modified
-5. **WORK_LOG.md** (if needed) - When deeper history is required
+5. **archive/WORK_LOG.md** (if needed) - When deeper history is required
 
 ### Avoiding Context Bloat
 - ❌ Don't copy entire files into PROJECT_STATE.md

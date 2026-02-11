@@ -383,11 +383,11 @@ Depends on Sprint 1 outcomes and project requirements
 - Tracks active sprint tasks
 - Links to this file for full backlog
 
-**WORK_LOG.md**:
+**archive/WORK_LOG.md**:
 - Records completed sprint tasks by session
 - Chronicles sprint progress over time
 
-**DELEGATION_ESCALATION_FLOWS.md**:
+**workflows/DELEGATION_ESCALATION_FLOWS.md**:
 - Agents use for inter-task collaboration
 - Escalations may add tasks or blockers to sprint
 
@@ -408,7 +408,7 @@ Depends on Sprint 1 outcomes and project requirements
 1. Verify all acceptance criteria met
 2. Update status: 🟡 → 🟢
 3. Update PROJECT_STATE.md with completion
-4. Add entry to WORK_LOG.md
+4. Add entry to archive/WORK_LOG.md
 5. Notify dependent agents if applicable
 
 ### To Block a Task

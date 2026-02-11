@@ -3,7 +3,19 @@
 **Last Updated**: 2026-02-10  
 **Current Phase**: Sprint 0 - Foundation & Architecture  
 **Active Agent**: Lead Software Engineer  
-**Session**: 2
+**Session**: 3
+
+---
+
+## 📢 Recent Changes
+
+**2026-02-10 - Context Directory Reorganization**:
+- Reorganized `.context/` folder into logical subdirectories
+- `workflows/` - Agent collaboration patterns (AGENT_WORKFLOW_GUIDE, AGENT_HANDOFF_PROTOCOL, DELEGATION_ESCALATION_FLOWS)
+- `sprints/` - Sprint tracking and templates (SPRINT_TRACKER, SPRINT_TEMPLATE, sprint-specific docs)
+- `archive/` - Historical records (WORK_LOG, QUICK_START)
+- All references updated across documentation
+- Improves navigation and scalability as project grows
 
 ---
 
@@ -25,7 +37,7 @@
 **Remaining** (optional):
 - ⬜ API Design Example (2 pts) - Can defer to Sprint 1
 
-📊 [Full Sprint Backlog & Progress](SPRINT_TRACKER.md)
+📊 [Full Sprint Backlog & Progress](sprints/SPRINT_TRACKER.md)
 
 ---
 
@@ -180,7 +192,7 @@ None
 ### Essential Files to Read (in order)
 1. This file (PROJECT_STATE.md) - Current state
 2. CONTEXT_INDEX.md - Find relevant documentation
-3. WORK_LOG.md - What's been completed
+3. archive/WORK_LOG.md - What's been completed
 4. Recent ADRs in /docs/adr/ - Key decisions
 
 ### Key Patterns & Conventions
@@ -217,6 +229,6 @@ None
 **How to use this file:**
 1. **Start of session**: Read this file first for current state
 2. **During work**: Update "Active Work" section
-3. **End of session**: Update status, add to WORK_LOG.md, prepare handoff
+3. **End of session**: Update status, add to archive/WORK_LOG.md, prepare handoff
 4. **Making decisions**: Create ADR, link here
 5. **Blocked**: Document in Blockers section with context

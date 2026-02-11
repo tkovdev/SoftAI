@@ -36,9 +36,19 @@ This project uses a structured approach to manage context, enable agent handoffs
 ```
 .context/
 ├── PROJECT_STATE.md         # Single source of truth for current state
-├── WORK_LOG.md              # Historical record of sessions
-├── AGENT_HANDOFF_PROTOCOL.md # Handoff procedures
-└── CONTEXT_INDEX.md         # Quick reference map
+├── CONTEXT_INDEX.md         # Quick reference map
+├── README.md                # Context system overview
+├── workflows/
+│   ├── AGENT_WORKFLOW_GUIDE.md        # This file - complete workflow
+│   ├── AGENT_HANDOFF_PROTOCOL.md      # Handoff procedures
+│   └── DELEGATION_ESCALATION_FLOWS.md # Visual diagrams
+├── sprints/
+│   ├── SPRINT_TRACKER.md    # Current sprint backlog and progress
+│   ├── SPRINT_TEMPLATE.md   # Template for new sprints
+│   └── sprint-0/            # Sprint-specific documentation
+└── archive/
+    ├── WORK_LOG.md          # Historical session records
+    └── QUICK_START.md       # Onboarding guide
 
 docs/adr/                    # Architecture decisions
 .github/agents/              # Agent specifications
@@ -89,7 +99,7 @@ Use CONTEXT_INDEX.md to:
 - Review API contracts if frontend/backend integration
 
 **For Bug Fixes:**
-- Read recent WORK_LOG.md entries (when was this last working?)
+- Read recent archive/WORK_LOG.md entries (when was this last working?)
 - Search for related code semantically
 - Check if there's an ADR about the area
 
@@ -215,13 +225,13 @@ docs/adr/00X-topic-decision-brief.md
 
 **For Minor Decisions:**
 - Document in code comments
-- Note in WORK_LOG.md if worth mentioning
+- Note in archive/WORK_LOG.md if worth mentioning
 - Don't create ADR for everything
 
 #### Step 2.4: Maintain Context
 
 As you work:
-- **Keep notes** of what you're doing (for WORK_LOG.md later)
+- **Keep notes** of what you're doing (for archive/WORK_LOG.md later)
 - **Track blockers** encountered
 - **Note decisions** made
 - **Document surprises** or unexpected complexity
@@ -236,7 +246,7 @@ As you work:
 - ✅ Documentation updated
 - ✅ No obvious blockers left for next agent
 
-#### Step 3.2: Update WORK_LOG.md
+#### Step 3.2: Update archive/WORK_LOG.md
 
 Add session entry:
 ```markdown
@@ -313,7 +323,7 @@ Link to recent ADRs (most recent first):
 #### Step 3.4: Final Checklist
 
 Before ending session:
-- [ ] WORK_LOG.md updated with session entry
+- [ ] archive/WORK_LOG.md updated with session entry
 - [ ] PROJECT_STATE.md updated (status, handoff, blockers)
 - [ ] ADRs created for significant decisions
 - [ ] Code committed with clear messages
@@ -884,7 +894,7 @@ Original agent sees completion, continues their work.
 - ❌ Read all code files "just in case"
 - ❌ Copy entire files into documents
 - ❌ Re-explain decisions (link to ADR)
-- ❌ Read WORK_LOG.md unless you need history
+- ❌ Read archive/WORK_LOG.md unless you need history
 - ❌ Load more context than your task requires
 
 ### Making Decisions
@@ -921,7 +931,7 @@ Original agent sees completion, continues their work.
 **When stuck:**
 1. Check CONTEXT_INDEX.md - is documentation available?
 2. Search semantically for examples
-3. Check WORK_LOG.md - was this attempted before?
+3. Check archive/WORK_LOG.md - was this attempted before?
 4. Try agent-to-agent delegation if another domain is involved
 5. Document the uncertainty in PROJECT_STATE.md
 6. Escalate to Lead Engineer with specific question and options

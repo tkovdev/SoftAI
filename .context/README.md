@@ -15,7 +15,39 @@ This directory contains the context management system that enables:
 
 ---
 
-## 📁 Files in This Directory
+## � Directory Structure
+
+```
+.context/
+├── PROJECT_STATE.md         # ⭐ START HERE - Current state (always read first)
+├── CONTEXT_INDEX.md         # Navigation hub for finding information
+├── README.md                # This file - overview and guide
+│
+├── workflows/               # Agent collaboration patterns
+│   ├── AGENT_WORKFLOW_GUIDE.md        # Complete workflow procedures
+│   ├── AGENT_HANDOFF_PROTOCOL.md      # Session start/end procedures
+│   └── DELEGATION_ESCALATION_FLOWS.md # Visual collaboration diagrams
+│
+├── sprints/                 # Agile sprint management
+│   ├── SPRINT_TRACKER.md    # Current sprint backlog and progress
+│   ├── SPRINT_TEMPLATE.md   # Template for creating new sprints
+│   └── sprint-0/            # Sprint-specific documentation
+│       └── SPRINT_0_COLLABORATION_GUIDE.md
+│
+└── archive/                 # Historical/reference documentation
+    ├── WORK_LOG.md          # Session history and completed work
+    └── QUICK_START.md       # Onboarding guide for new agents
+```
+
+**Organization Principles**:
+- **Root level**: Most frequently accessed files (PROJECT_STATE, CONTEXT_INDEX, README)
+- **workflows/**: All agent coordination and delegation patterns
+- **sprints/**: Active sprint work and templates
+- **archive/**: Historical records and reference guides
+
+---
+
+## �📁 Files in This Directory
 
 ### [PROJECT_STATE.md](PROJECT_STATE.md) ⭐ START HERE
 **The single source of truth for current project state**
@@ -47,7 +79,7 @@ Use this to:
 
 ---
 
-### [WORK_LOG.md](WORK_LOG.md)
+### [WORK_LOG.md](archive/WORK_LOG.md)
 **Historical record of all development sessions**
 
 Chronicles:
@@ -61,7 +93,7 @@ Chronicles:
 
 ---
 
-### [AGENT_HANDOFF_PROTOCOL.md](AGENT_HANDOFF_PROTOCOL.md)
+### [AGENT_HANDOFF_PROTOCOL.md](workflows/AGENT_HANDOFF_PROTOCOL.md)
 **Standard procedures for agent transitions**
 
 Defines:
@@ -75,7 +107,7 @@ Defines:
 
 ---
 
-### [AGENT_WORKFLOW_GUIDE.md](AGENT_WORKFLOW_GUIDE.md)
+### [AGENT_WORKFLOW_GUIDE.md](workflows/AGENT_WORKFLOW_GUIDE.md)
 **Complete workflow guide for AI agents**
 
 Comprehensive guide covering:

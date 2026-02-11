@@ -169,7 +169,7 @@ I draft all 5 ADRs, you review them as a batch.
 **Best for**: When you trust my recommendations and can dedicate 1-2 hours for batch review
 
 ### Option C: Trust & Verify (Fastest)
-I proceed with my recommendations documented in [SPRINT_TRACKER.md](.context/SPRINT_TRACKER.md), you review final ADRs.
+I proceed with my recommendations documented in [SPRINT_TRACKER.md](../SPRINT_TRACKER.md), you review final ADRs.
 
 **Pros**: Fastest, you only review when done  
 **Cons**: If you disagree, more rework needed  

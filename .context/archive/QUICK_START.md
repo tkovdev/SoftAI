@@ -58,7 +58,7 @@ Update PROJECT_STATE.md → "Active Work":
 
 ### Required Updates (10 min)
 
-1. **Add to WORK_LOG.md:**
+1. **Add to archive/WORK_LOG.md:**
 ```markdown
 ## Session N - [Date]
 **Agent**: [You]
@@ -126,8 +126,8 @@ Update PROJECT_STATE.md → "Active Work":
 
 - [PROJECT_STATE.md](PROJECT_STATE.md) - ⭐ START HERE
 - [CONTEXT_INDEX.md](CONTEXT_INDEX.md) - Find information
-- [AGENT_WORKFLOW_GUIDE.md](AGENT_WORKFLOW_GUIDE.md) - Complete workflow
-- [AGENT_HANDOFF_PROTOCOL.md](AGENT_HANDOFF_PROTOCOL.md) - Handoff details
+- [AGENT_WORKFLOW_GUIDE.md](../workflows/AGENT_WORKFLOW_GUIDE.md) - Complete workflow
+- [AGENT_HANDOFF_PROTOCOL.md](../workflows/AGENT_HANDOFF_PROTOCOL.md) - Handoff details
 - [../docs/adr/](../docs/adr/) - Architecture decisions
 
 ---
