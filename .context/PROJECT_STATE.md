@@ -1,102 +1,114 @@
-# Project State
+# SoftAI Framework - Active Projects Registry
 
+**Purpose**: This file tracks active projects using the SoftAI framework  
 **Last Updated**: 2026-02-10  
-**Current Phase**: Sprint 0 - Foundation & Architecture (COMPLETE ✅)  
-**Active Agent**: Lead Software Engineer  
-**Session**: 3
+**Framework Version**: 1.0
 
 ---
 
-## 📢 Recent Changes
+## ⚠️ IMPORTANT: This is the Framework, Not a Project
 
-**2026-02-10 - Code Location Established**:
-- ✅ Decided application code will reside in `SoftAI-Example/` workspace folder
-- ✅ Updated PROJECT_STATE.md and README.md with new structure
-- 📍 SoftAI/ contains agent system and architectural documentation
-- 📍 SoftAI-Example/ will contain the actual application code
-- **Next**: Define product concept and scaffold SoftAI-Example/ workspace
+**SoftAI** is a reusable framework containing:
+- Agent definitions (`.github/agents/`)
+- Architecture Decision Records (ADRs) (`docs/adr/`)
+- Workflow templates (`.context/workflows/`)
+- Sprint templates (`.context/sprints/`)
 
-**2026-02-10 - Sprint 0 Complete - All ADRs Created** (Earlier):
-- ✅ Created ADR-007: Authentication & Authorization Strategy (Azure AD SSO, MSAL for Angular)
-- ✅ Created ADR-008: API Design Standards (RESTful, versioning, pagination, RFC 7807)
-- ✅ Created ADR-009: Database Migration Strategy (EF Core migrations, deployment)
-- ✅ Created ADR-010: Testing Strategy (MSTest, Jasmine/Karma, Playwright, testing pyramid)
-- ✅ Created ADR-011: CI/CD Pipeline Design (GitHub Actions, Docker, multi-stage deployment)
-- ✅ Created ADR-012: Angular State Management (Signals, NgRx Signal Store, rxResource)
-- ✅ Updated ADR-007: Changed to Azure AD SSO with MSAL for Angular (per stakeholder requirement)
-- ✅ Updated ADR index with all 12 architectural decisions
-- **Sprint 0 is now 100% complete** - Ready for project scaffolding and requirements gathering
-
-**2026-02-10 - Context Directory Reorganization** (Earlier):
-- Reorganized `.context/` folder into logical subdirectories
-- `workflows/` - Agent collaboration patterns
-- `sprints/` - Sprint tracking and templates
-- `archive/` - Historical records
+**Actual project implementation** happens in separate workspace folders.
 
 ---
 
-## 🏃 Current Sprint
+## 🎯 Active Projects
 
-**Sprint 0** - Foundation & Architecture (Feb 10-17)  
-**Goal**: Establish architectural decisions, coding standards, and project foundation  
-**Progress**: 🟢 100% complete (All ADRs approved, ready for Sprint 1)
+### DVD Rental System
+**Location**: `../SoftAI-Example/`  
+**Status**: 🟢 Active Development  
+**Phase**: Sprint 0 - Requirements & Foundation  
+**Started**: 2026-02-10
 
-**Completed**:
-1. ✅ ADR-002: C# Coding Standards
-2. ✅ ADR-003: TypeScript Coding Standards
-3. ✅ ADR-004: Error Handling Strategy
-4. ✅ ADR-005: Logging Strategy
-5. ✅ ADR-006: Technology Stack
-6. ✅ ADR-007: Authentication & Authorization Strategy
-7. ✅ ADR-008: API Design Standards
-8. ✅ ADR-009: Database Migration Strategy
-9. ✅ ADR-010: Testing Strategy
-10. ✅ ADR-011: CI/CD Pipeline Design
-11. ✅ ADR-012: Angular State Management
-12. ✅ Coding standards cheat sheet
-13. ✅ Agent handoff protocol with ADR references
+**Quick Links**:
+- **Project Status**: [../SoftAI-Example/.context/PROJECT_STATE.md](../SoftAI-Example/.context/PROJECT_STATE.md)
+- **Requirements**: [../SoftAI-Example/.context/requirements/BUSINESS_REQUIREMENTS.md](../SoftAI-Example/.context/requirements/BUSINESS_REQUIREMENTS.md)
+- **Current Sprint**: [../SoftAI-Example/.context/sprints/sprint-0/SPRINT_0_PLAN.md](../SoftAI-Example/.context/sprints/sprint-0/SPRINT_0_PLAN.md)
+- **Work Log**: [../SoftAI-Example/.context/WORK_LOG.md](../SoftAI-Example/.context/WORK_LOG.md)
 
-**Status**: ✅ Sprint 0 Complete - Ready to proceed to project scaffolding and requirements gathering
+**Description**: Dual-system DVD rental platform with internal back-office management and external customer portal.
 
-📊 [Full Sprint Backlog & Progress](sprints/SPRINT_TRACKER.md)
+**Technology Stack**:
+- Backend: .NET 10 with CQRS (MediatR)
+- Frontend: Angular 21 with Signals & PrimeNG
+- Database: SQL Server 2022
 
 ---
 
-## 🎯 Current Focus
+## 📚 Framework Resources
 
-### Active Work
-- ✅ Context management system established (Session 1)
-- ✅ Agent workflow defined (Session 1 & 2)
-- ✅ Agent-to-agent delegation protocols established (Session 2)
-- ✅ Conflict resolution escalation path defined (Session 2)
-- ✅ Sprint tracking system created (Session 2)
-- ✅ Sprint 0 complete - All 12 ADRs approved (Session 3)
+### For All Agents
+- **Agent Definitions**: `./.github/agents/` - Your role and responsibilities
+- **Architecture Standards**: `./docs/adr/` - All architectural decisions
+- **Workflow Guides**: `./.context/workflows/` - Collaboration patterns
 
-### Sprint 0 Status - COMPLETE ✅
-All architectural ADRs completed and approved:
-1. ✅ ADR-002 (C# Coding Standards)
-2. ✅ ADR-003 (TypeScript Coding Standards)
-3. ✅ ADR-004 (Error Handling Strategy)
-4. ✅ ADR-005 (Logging Strategy)
-5. ✅ ADR-006 (Technology Stack)
-6. ✅ ADR-007 (Authentication & Authorization Strategy)
-7. ✅ ADR-008 (API Design Standards)
-8. ✅ ADR-009 (Database Migration Strategy)
-9. ✅ ADR-010 (Testing Strategy)
-10. ✅ ADR-011 (CI/CD Pipeline Design)
-11. ✅ ADR-012 (Angular State Management)
+### Key Framework Documents
+- **[CONTEXT_INDEX.md](./.context/CONTEXT_INDEX.md)** - Quick reference guide
+- **[AGENT_WORKFLOW_GUIDE.md](./.context/workflows/AGENT_WORKFLOW_GUIDE.md)** - Complete workflow
+- **[AGENT_HANDOFF_PROTOCOL.md](./.context/workflows/AGENT_HANDOFF_PROTOCOL.md)** - Handoff procedures
+- **[DELEGATION_ESCALATION_FLOWS.md](./.context/workflows/DELEGATION_ESCALATION_FLOWS.md)** - Visual diagrams
 
-### Next Steps (Sprint 1)
-**Application Code Location**: All application code will be developed in the `SoftAI-Example/` workspace folder, keeping the agent system (`SoftAI/`) separate from the example application.
+---
 
-**Remaining before requirements gathering**:
-1. ⬜ Define what application we're building (product concept)
-2. ⬜ Project scaffolding in SoftAI-Example/ (solution structure, projects, folders)
-3. ⬜ Development environment setup (Docker, configs, .gitignore)
-4. ⬜ Requirements templates for Product Manager Agent
-5. ⬜ CI/CD foundation (basic GitHub Actions workflows)
+## 🚀 Starting Work?
 
-**Then ready for**: Requirements elicitation and feature development
+### 1. Identify Your Project
+Check the **Active Projects** section above for your project location.
+
+### 2. Read Project Context
+Navigate to the project folder and read:
+1. `PROJECT_STATE.md` - Current project status
+2. Current sprint plan in `sprints/sprint-X/`
+3. Relevant requirements documents
+
+### 3. Review Framework Standards
+Read ADRs relevant to your work area:
+- Backend: ADR-001, 002, 004, 005, 006, 009
+- Frontend: ADR-003, 006, 012
+- Database: ADR-006, 009
+- API: ADR-008
+- Security: ADR-007
+- Testing: ADR-010
+- DevOps: ADR-011
+
+### 4. Follow Agent Workflow
+Use `.context/workflows/AGENT_WORKFLOW_GUIDE.md` for collaboration patterns.
+
+---
+
+## 📝 Framework Maintenance
+
+### Framework Updates
+- **ADRs**: Created by Lead Software Engineer, apply to all projects
+- **Agent Definitions**: Updated by Instructor Agent when needed
+- **Workflows**: Updated by Lead Software Engineer based on lessons learned
+
+### Project-Specific Content
+- **Requirements**: Stored in project folder
+- **Sprint Plans**: Stored in project folder
+- **Work Logs**: Stored in project folder
+- **Code**: Stored in project folder
+
+---
+
+## 🔗 Adding New Projects
+
+To start a new project using SoftAI:
+
+1. Create new workspace folder (e.g., `SoftAI-ProjectName/`)
+2. Copy `.context/` structure from existing project
+3. Update this registry with new project details
+4. Follow Sprint 0 process for foundation setup
+
+---
+
+**Last Framework Update**: 2026-02-10 (All 12 ADRs established)
 
 ---
 

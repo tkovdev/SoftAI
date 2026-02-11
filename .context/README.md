@@ -1,103 +1,128 @@
-# Context Management System
+# SoftAI Framework - Context Management System
 
-**Efficient context management for AI agent-driven development**
+**Context management templates and active project registry for AI agent-driven development**
 
 ---
 
-## 🎯 Purpose
+## ⚠️ IMPORTANT: Framework vs Project
 
-This directory contains the context management system that enables:
+### This Folder (SoftAI/.context/)
+Contains **reusable framework resources**:
+- Active project registry ([PROJECT_STATE.md](PROJECT_STATE.md))
+- Agent workflow templates ([workflows/](workflows/))
+- Sprint planning templates ([sprints/](sprints/))
+- Context management guidelines (this file)
+
+### Actual Project Folders
+**Real project work** happens in separate workspace folders:
+- **DVD Rental System**: `../SoftAI-Example/` - Active development
+- **Future Projects**: `../SoftAI-YourProject/`
+
+Each project has its own `.context/` folder with:
+- Project-specific `PROJECT_STATE.md`
+- Project-specific `WORK_LOG.md`
+- Requirements and sprint plans
+- Project tracking and progress
+
+---
+
+## 🎯 Purpose of This System
+
+This framework enables:
 - **Small context windows**: Agents load only what they need
 - **Seamless handoffs**: Any agent can pick up where another left off  
-- **Session continuity**: Work flows smoothly across multiple sessions
-- **Decision preservation**: Architectural decisions are documented and findable
-- **Progress tracking**: Clear visibility into what's been done and what's next
+- **Clear separation**: Framework stays reusable, projects stay separate
+- **Decision preservation**: ADRs documented once, used by all projects
+- **Progress tracking**: Each project tracks its own progress
 
 ---
 
-## � Directory Structure
+## 📁 Directory Structure
 
 ```
-.context/
-├── PROJECT_STATE.md         # ⭐ START HERE - Current state (always read first)
-├── CONTEXT_INDEX.md         # Navigation hub for finding information
-├── README.md                # This file - overview and guide
+SoftAI/.context/              # Framework folder (this location)
+├── PROJECT_STATE.md          # ⭐ Active projects registry
+├── CONTEXT_INDEX.md          # Framework navigation guide
+├── README.md                 # This file
 │
-├── workflows/               # Agent collaboration patterns
-│   ├── AGENT_WORKFLOW_GUIDE.md        # Complete workflow procedures
-│   ├── AGENT_HANDOFF_PROTOCOL.md      # Session start/end procedures
-│   └── DELEGATION_ESCALATION_FLOWS.md # Visual collaboration diagrams
+├── workflows/                # Reusable agent patterns
+│   ├── AGENT_WORKFLOW_GUIDE.md
+│   ├── AGENT_HANDOFF_PROTOCOL.md
+│   └── DELEGATION_ESCALATION_FLOWS.md
 │
-├── sprints/                 # Agile sprint management
-│   ├── SPRINT_TRACKER.md    # Current sprint backlog and progress
-│   ├── SPRINT_TEMPLATE.md   # Template for creating new sprints
-│   └── sprint-0/            # Sprint-specific documentation
-│       └── SPRINT_0_COLLABORATION_GUIDE.md
+├── sprints/                  # Sprint templates
+│   ├── SPRINT_TEMPLATE.md
+│   └── sprint-0/             # Framework's own Sprint 0 (complete)
 │
-└── archive/                 # Historical/reference documentation
-    ├── WORK_LOG.md          # Session history and completed work
-    └── QUICK_START.md       # Onboarding guide for new agents
-```
+└── archive/                  # Framework development history
+    └── WORK_LOG.md           # Framework evolution log
 
-**Organization Principles**:
-- **Root level**: Most frequently accessed files (PROJECT_STATE, CONTEXT_INDEX, README)
-- **workflows/**: All agent coordination and delegation patterns
-- **sprints/**: Active sprint work and templates
-- **archive/**: Historical records and reference guides
+SoftAI-Example/.context/      # Project folder (separate workspace)
+├── PROJECT_STATE.md          # Project's current state
+├── WORK_LOG.md               # Project's session history
+├── requirements/             # Project requirements
+└── sprints/                  # Project sprint plans
+```
 
 ---
 
-## �📁 Files in This Directory
+## 📚 Framework Files
 
 ### [PROJECT_STATE.md](PROJECT_STATE.md) ⭐ START HERE
-**The single source of truth for current project state**
+**Registry of active projects using SoftAI**
 
-Read this first, every session. Contains:
-- Current focus and active work
-- Pending delegations between agents
-- Active discussions and collaboration
-- Project status summary
-- Recent decisions (with ADR links)
-- Current blockers and escalations
-- Next agent handoff information
+Contains:
+- List of all active projects
+- Links to each project's context folder
+- Framework version and status
+- Quick links to framework resources
 
-**Update this**: Start of session (claim work), during work (delegations/discussions), and end of session (status + handoff)
+**When to read**: When starting work to identify your project location
 
 ---
 
 ### [CONTEXT_INDEX.md](CONTEXT_INDEX.md)
-**Quick reference map to find information fast**
+**Framework navigation guide**
 
 Use this to:
-- Find documentation relevant to your task
-- Understand where specific information lives
-- Learn project structure and conventions
-- Identify appropriate search strategies
-- Minimize context window usage
+- Find ADRs relevant to your work
+- Locate agent definitions
+- Understand framework patterns
+- Learn how to navigate project context
 
-**Update this**: When adding new major documentation or establishing new patterns
-
----
-
-### [WORK_LOG.md](archive/WORK_LOG.md)
-**Historical record of all development sessions**
-
-Chronicles:
-- What was completed in each session
-- Which agents worked on what
-- Decisions made (with ADR links)
-- Blockers encountered and resolved
-- Files created or modified
-
-**Update this**: End of every session with session entry
+**When to read**: After identifying your project, to find framework standards
 
 ---
 
-### [AGENT_HANDOFF_PROTOCOL.md](workflows/AGENT_HANDOFF_PROTOCOL.md)
-**Standard procedures for agent transitions**
+## 🚀 Getting Started with a Project
 
-Defines:
-- How to start a session (what to read, in what order)
+### For Agents Starting Work:
+
+1. **Read Framework Registry** (1 min)
+   - Open [PROJECT_STATE.md](PROJECT_STATE.md)
+   - Find your project in the Active Projects list
+   - Note the project folder location
+
+2. **Navigate to Project Folder**
+   - Go to the project workspace (e.g., `../SoftAI-Example/`)
+   - Read the project's `PROJECT_STATE.md`
+   - Review current sprint plan
+
+3. **Review Framework Standards** (10-15 min)
+   - Use [CONTEXT_INDEX.md](CONTEXT_INDEX.md) to find relevant ADRs
+   - Read your agent definition in `../.github/agents/`
+   - Review workflow patterns if needed
+
+4. **Start Working**
+   - Follow the project's sprint plan
+   - Update the project's context (not framework context)
+   - Use framework workflows for collaboration
+
+---
+
+## 🔄 Agent Workflow Templates
+
+This folder contains **reusable workflow patterns** that apply to all projects:
 - What to do during work (how to track progress)
 - How to end a session (what to update, how to handoff)
 - Agent-specific guidelines for different roles
@@ -107,250 +132,136 @@ Defines:
 
 ---
 
-### [AGENT_WORKFLOW_GUIDE.md](workflows/AGENT_WORKFLOW_GUIDE.md)
+### [workflows/AGENT_WORKFLOW_GUIDE.md](workflows/AGENT_WORKFLOW_GUIDE.md)
 **Complete workflow guide for AI agents**
 
 Comprehensive guide covering:
-- Phase 1: Session Start (loading context efficiently)
-- Phase 2: Work Execution (doing the work)
-- Phase 3: Session End (documentation and handoff)
+- Session start, work execution, session end
 - Agent-to-agent delegation protocols
 - Conflict resolution and escalation paths
-- Decision-making authority levels (Agent → Peer → Lead → Human)
-- Agent coordination patterns
+- Decision-making authority levels
 - Best practices and common pitfalls
 
-**Read this**: When onboarding, need delegation guidance, or workflow is unclear
+**Use this**: For delegation guidance, conflict resolution, workflow clarification
 
 ---
 
-### [DELEGATION_ESCALATION_FLOWS.md](DELEGATION_ESCALATION_FLOWS.md) 📊
-**Visual diagrams and quick reference for agent collaboration**
+### [workflows/AGENT_HANDOFF_PROTOCOL.md](workflows/AGENT_HANDOFF_PROTOCOL.md)
+**Standard procedures for agent transitions**
 
-Visual reference covering:
-- Delegation flow diagram (agent-to-agent requests)
-- Escalation flow diagram (conflict resolution)
-- Decision authority matrix (what to decide vs escalate)
-- Collaboration pattern diagrams
-- Time-boxing guidelines
+Defines:
+- How to start a session (what to read, in what order)
+- What to do during work
+- How to end a session and document handoffs
+
+**Use this**: When learning the system or improving handoff quality
+
+---
+
+### [workflows/DELEGATION_ESCALATION_FLOWS.md](workflows/DELEGATION_ESCALATION_FLOWS.md) 📊
+**Visual diagrams for agent collaboration**
+
+Visual reference including:
+- Delegation flow diagrams
+- Escalation flow diagrams
+- Decision authority matrix
 - Quick reference checklists
 
-**Read this**: When you need to delegate work, resolve disagreements, or escalate decisions
+**Use this**: When delegating work, resolving disagreements, or escalating decisions
 
 ---
 
-### [SPRINT_TRACKER.md](SPRINT_TRACKER.md) 🏃
-**Agile sprint planning, backlog, and progress tracking**
+### [sprints/SPRINT_TEMPLATE.md](sprints/SPRINT_TEMPLATE.md)
+**Template for sprint planning**
 
-Manages sprints covering:
-- Current sprint goals and progress
-- Sprint backlog with user stories and tasks
-- Story point estimation and velocity tracking
-- Task prioritization (P0 blocking → P3 nice-to-have)
-- Sprint ceremonies and definitions (DoR/DoD)
-- Integration with PROJECT_STATE for active work
+Reusable template for creating sprint plans in projects. Each project uses this to create their own sprint documentation.
 
-**Read this**: At sprint start, when planning work, or checking what to work on next
-
-**Update this**: When task status changes, at end of sprint, during sprint planning
+**Use this**: When planning a new sprint in your project
 
 ---
 
-## 🚀 Quick Start
+## 📝 Project Context vs Framework Context
 
-### For Agents Starting Work
+### What Goes in Framework Context (SoftAI/.context/)
+- Active project registry
+- Workflow templates
+- Sprint planning templates
+- Framework evolution history
 
-**5-Minute Context Load:**
+### What Goes in Project Context (e.g., SoftAI-Example/.context/)
+- Project status and progress
+- Project requirements
+- Sprint plans and backlogs
+- Project work logs
+- Project-specific decisions
 
-1. **Read [PROJECT_STATE.md](PROJECT_STATE.md)** (5 min)
-   - Current focus and active work
-   - Your specific handoff instructions
-   - Recent decisions and blockers
-
-2. **Skim [CONTEXT_INDEX.md](CONTEXT_INDEX.md)** (2 min)
-   - Find relevant documentation for your task
-   - Understand how to search for information
-
-3. **Load task-specific context** (10 min)
-   - Your agent specification (.github/agents/)
-   - Relevant ADRs (docs/adr/)
-   - Specific code files you'll modify
-
-**Total: ~15-20 minutes to full context**
+**Key Rule**: Framework = reusable, Project = specific implementation
 
 ---
 
-## 🔄 Workflow Summary
+## 🆕 Creating a New Project
 
-```
-┌─────────────────────────────────────────┐
-│         SESSION START                   │
-│  1. Read PROJECT_STATE.md               │
-│  2. Check CONTEXT_INDEX.md              │
-│  3. Load task-specific context          │
-│  4. Update "Active Work"                │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│         WORK EXECUTION                  │
-│  • Follow agent-specific guidelines     │
-│  • Document decisions (ADR if major)    │
-│  • Track progress and blockers          │
-│  • Maintain clear commits               │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│         SESSION END                     │
-│  1. Update WORK_LOG.md                  │
-│  2. Update PROJECT_STATE.md             │
-│  3. Create ADRs if needed               │
-│  4. Prepare next agent handoff          │
-│  5. Commit all changes                  │
-└─────────────────────────────────────────┘
-```
+To start a new project using SoftAI:
+
+1. **Create Project Workspace**
+   - Create folder: `SoftAI-YourProject/`
+   - Create `.context/` subfolder
+
+2. **Copy Context Structure**
+   - Use `SoftAI-Example/.context/` as template
+   - Copy folder structure and templates
+   - Update with your project details
+
+3. **Register Project**
+   - Add to [PROJECT_STATE.md](PROJECT_STATE.md) Active Projects section
+   - Include project name, location, status, description
+
+4. **Follow Sprint 0 Process**
+   - Requirements gathering
+   - Domain modeling
+   - Architecture design
+   - Project scaffolding
 
 ---
 
-## 📊 System Benefits
+## 📚 Additional Framework Resources
 
-### Before Context Management System
-- ❌ Agents read entire codebase (context overload)
-- ❌ Unclear what's been done or what's next
-- ❌ Decisions lost or undocumented
-- ❌ Poor handoffs between agents
-- ❌ Duplicate work or conflicts
+### Architecture Decision Records
+Location: `../docs/adr/`
+- All architectural standards and decisions
+- Apply to all projects using SoftAI
+- Created by Lead Software Engineer
 
-### After Context Management System
-- ✅ Agents read only what's needed (~20% of codebase)
-- ✅ Clear visibility into status and next steps
-- ✅ All decisions documented in ADRs
-- ✅ Smooth transitions between agents
-- ✅ Coordinated work, no conflicts
+### Agent Definitions
+Location: `../.github/agents/`
+- Specifications for all agent roles
+- Responsibilities and guidelines
+- Valid across all projects
 
----
-
-## 🎯 Design Principles
-
-1. **Single Source of Truth**: PROJECT_STATE.md is always authoritative
-2. **Minimal Context**: Load only what's needed for current task
-3. **Progressive Disclosure**: Start broad (state), drill down (specifics)
-4. **Link, Don't Duplicate**: Reference detailed docs instead of copying
-5. **Timeless Documentation**: Write for future developers without current context
+### SoftAI README
+Location: `../README.md`
+- Framework overview
+- System architecture
+- Getting started guide
 
 ---
 
-## 🛠️ Integration with Agent System
+## 💡 Best Practices
 
-### Agent Hierarchy
-```
-Instructor Agent (Meta)
-    │
-    ▼
-Lead Software Engineer (Orchestrator)
-    │
-    ├─> Backend Developer ─────┐
-    ├─> Frontend Developer ─────┤
-    ├─> Database Engineer ──────┤
-    ├─> QA/Testing Agent ───────┤
-    ├─> DevOps Engineer ────────┤──> All use context system
-    ├─> Security Engineer ──────┤
-    ├─> Code Reviewer ──────────┤
-    ├─> API Designer ───────────┤
-    └─> Documentation Agent ────┘
-```
+### For All Agents
+1. **Start with registry**: Read framework [PROJECT_STATE.md](PROJECT_STATE.md) to find your project
+2. **Work in project context**: Update project's context, not framework's
+3. **Reference framework**: Use ADRs and workflows, don't duplicate them
+4. **Minimize context**: Load only what you need for current task
 
-**Every agent**:
-- Starts session by reading PROJECT_STATE.md
-- Updates state during and after work
-- Follows handoff protocol
-- Documents decisions
-- Prepares clear handoffs
+### For Lead Software Engineer
+- Keep project registry current
+- Update workflow templates based on lessons learned
+- Ensure agents understand framework vs project separation
+- Create new ADRs when architectural patterns emerge
 
 ---
 
-## 📚 Related Documentation
-
-- **Agent Specifications**: `.github/agents/` - How each agent works
-- **Architecture Decisions**: `docs/adr/` - Why things are the way they are
-- **API Documentation**: `docs/api/` - API contracts and specs
-- **Developer Guides**: `docs/guides/` - Setup and how-to guides
-
----
-
-## 🔧 Maintenance
-
-### Keeping the System Healthy
-
-**Daily (during active development)**:
-- Update PROJECT_STATE.md every session
-- Add WORK_LOG.md entries after work
-- Create ADRs for significant decisions
-
-**Weekly**:
-- Review PROJECT_STATE.md for stale information
-- Verify ADR index is up to date
-- Check that handoffs are working smoothly
-
-**Monthly**:
-- Archive old WORK_LOG entries if file becomes large
-- Review and update CONTEXT_INDEX.md
-- Evaluate system effectiveness, improve as needed
-
----
-
-## ❓ FAQ
-
-**Q: Do I really need to update PROJECT_STATE.md every session?**  
-A: Yes! It's the single source of truth. Without updates, the system breaks down.
-
-**Q: When should I create an ADR vs just document in code?**  
-A: Create ADR for architectural/design decisions that affect multiple parts of system. Use code comments for implementation details.
-
-**Q: What if PROJECT_STATE.md gets too large?**  
-A: It shouldn't - link to details instead of duplicating. If it does, refactor by moving old content to WORK_LOG or archive.
-
-**Q: Can agents work in parallel?**  
-A: Yes, if working on non-overlapping areas. Lead Engineer coordinates via PROJECT_STATE.md to prevent conflicts.
-
-**Q: What if handoff is unclear?**  
-A: Document the confusion in PROJECT_STATE.md → Blockers, escalate to Lead Engineer.
-
----
-
-## 🎓 Learning Resources
-
-1. **New to the system?**
-   → Read [AGENT_WORKFLOW_GUIDE.md](AGENT_WORKFLOW_GUIDE.md)
-
-2. **Need to handoff work?**
-   → Read [AGENT_HANDOFF_PROTOCOL.md](AGENT_HANDOFF_PROTOCOL.md)
-
-3. **Can't find information?**
-   → Check [CONTEXT_INDEX.md](CONTEXT_INDEX.md)
-
-4. **Making a decision?**
-   → See `docs/adr/README.md` for ADR guidance
-
-5. **Current project state?**
-   → Always start with [PROJECT_STATE.md](PROJECT_STATE.md)
-
----
-
-## 📞 System Issues?
-
-If the context management system isn't working:
-1. Review [AGENT_WORKFLOW_GUIDE.md](AGENT_WORKFLOW_GUIDE.md) for best practices
-2. Check if all files are being updated properly
-3. Verify agents are following the workflow
-4. Propose improvements to Lead Software Engineer
-5. Update system documentation to reflect improvements
-
----
-
-**The goal**: Enable efficient, coordinated, high-quality development with AI agents. If something doesn't serve that goal, improve it!
-
----
-
-Last Updated: 2026-02-10
+**Last Updated**: 2026-02-10  
+**Framework Version**: 1.0  
+**Active Projects**: 1 (DVD Rental System)

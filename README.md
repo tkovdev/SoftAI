@@ -1,74 +1,69 @@
-# SoftAI - AI Agent-Driven Development System
+# SoftAI - AI Agent-Driven Development Framework
 
-**A structured approach to building robust web applications using AI agents**
+**A reusable framework for building robust web applications using specialized AI agents**
 
 ---
 
 ## 🎯 Overview
 
-This project provides a complete system for developing web applications using AI agents with:
-- **Agent-driven development**: Specialized AI agents for different roles (backend, frontend, testing, etc.)
-- **Context management**: Efficient system to keep AI context windows small and enable seamless handoffs
-- **Clean architecture**: C# .NET backend with CQRS pattern, Angular 21 frontend with Signals
-- **Quality focus**: Built-in testing, security, and code review workflows
+SoftAI is a **framework** (not an application) that provides:
+- **Agent definitions**: Specialized AI agents for different roles (backend, frontend, testing, etc.)
+- **Context management**: System to keep AI context small and enable seamless handoffs
+- **Architecture standards**: Proven patterns for C# .NET + Angular applications
+- **Workflow templates**: Sprint planning, delegation, and collaboration patterns
+
+**Projects using SoftAI** are in separate workspace folders (e.g., `SoftAI-Example/`).
 
 ---
 
 ## 🏗️ System Architecture
 
-### Three-Layer Structure
+### Framework + Project Structure
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                   AGENT SYSTEM                              │
-│  (.github/agents/)                                          │
+│                   SOFTAI FRAMEWORK                          │
+│  (Reusable across all projects)                            │
 │                                                             │
-│  Instructor (Meta)                                          │
-│       ↓                                                     │
-│  Lead Software Engineer (Orchestrator)                      │
-│       ↓                                                     │
-│  Specialized Agents (Backend, Frontend, Database, etc.)     │
+│  • Agent Definitions (.github/agents/)                      │
+│  • Architecture Standards (docs/adr/)                       │
+│  • Workflow Templates (.context/workflows/)                 │
+│  • Context System (.context/)                              │
 └─────────────────────────────────────────────────────────────┘
-                          ↓ uses
+                          ↓ used by
 ┌─────────────────────────────────────────────────────────────┐
-│              CONTEXT MANAGEMENT SYSTEM                      │
-│  (.context/)                                                │
+│              PROJECT IMPLEMENTATION                         │
+│  (e.g., SoftAI-Example/, SoftAI-YourProject/)              │
 │                                                             │
-│  • PROJECT_STATE.md - Current state tracking                │
-│  • WORK_LOG.md - Session history                            │
-│  • AGENT_HANDOFF_PROTOCOL.md - Handoff procedures          │
-│  • CONTEXT_INDEX.md - Quick reference                       │
-│  • AGENT_WORKFLOW_GUIDE.md - Complete workflow             │
-└─────────────────────────────────────────────────────────────┘
-                          ↓ builds
-┌─────────────────────────────────────────────────────────────┐
-│                 WEB APPLICATION                             │
-│  (src/, tests/, docs/)                                      │
-│                                                             │
-│  • Backend: C# .NET with CQRS (MediatR)                     │
-│  • Frontend: Angular 21 with Signals                        │
-│  • Database: Entity Framework Core                          │
-│  • Architecture Decisions: ADRs (docs/adr/)                 │
+│  • Application Code (src/, frontend/)                       │
+│  • Project Tests (tests/)                                  │
+│  • Requirements (.context/requirements/)                    │
+│  • Sprint Plans (.context/sprints/)                        │
+│  • Work Logs (.context/WORK_LOG.md)                        │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
-### SoftAI/ - Agent System & Documentation
+### SoftAI/ - Framework Repository
 ```
-SoftAI/                                 # Agent system (this repository)
-├── .context/                           # Context management system
-│   ├── PROJECT_STATE.md                # ⭐ Current project state (START HERE)
-│   ├── WORK_LOG.md                     # Session history
-│   ├── AGENT_HANDOFF_PROTOCOL.md       # Handoff procedures
-│   ├── CONTEXT_INDEX.md                # Quick reference map
-│   ├── AGENT_WORKFLOW_GUIDE.md         # Complete workflow guide
-│   └── README.md                       # Context system documentation
+SoftAI/                                 # Framework (this repository)
+├── .context/                           # Context management templates
+│   ├── PROJECT_STATE.md                # Active projects registry
+│   ├── CONTEXT_INDEX.md                # Framework navigation guide
+│   ├── README.md                       # Context system documentation
+│   ├── workflows/                      # Agent collaboration patterns
+│   │   ├── AGENT_WORKFLOW_GUIDE.md     # Complete workflow
+│   │   ├── AGENT_HANDOFF_PROTOCOL.md   # Handoff procedures
+│   │   └── DELEGATION_ESCALATION_FLOWS.md # Visual diagrams
+│   ├── sprints/                        # Sprint templates
+│   │   └── SPRINT_TEMPLATE.md
+│   └── archive/                        # Framework history
 │
 ├── .github/agents/                     # AI agent specifications
-│   ├── instructor.agent.md             # Meta-agent for creating agents
+│   ├── instructor.agent.md             # Meta-agent
 │   ├── lead-software-engineer.agent.md # Orchestrator
 │   ├── backend-developer.agent.md      # Backend specialist
 │   ├── frontend-developer.agent.md     # Frontend specialist
@@ -78,60 +73,108 @@ SoftAI/                                 # Agent system (this repository)
 │   ├── security-engineer.agent.md      # Security specialist
 │   ├── code-reviewer.agent.md          # Code review specialist
 │   ├── api-designer.agent.md           # API design specialist
-│   └── documentation.agent.md          # Documentation specialist
+│   ├── documentation.agent.md          # Documentation specialist
+│   └── product-manager.agent.md        # Product/requirements specialist
 │
-├── docs/                               # Architectural documentation
-│   ├── adr/                            # Architecture Decision Records
-│   │   ├── README.md                   # ADR index and guidelines
-│   │   ├── TEMPLATE.md                 # ADR template
-│   │   └── 001-012-*.md                # All architectural decisions
-│   └── guides/                         # System guides
-│
-└── README.md                           # This file
+└── docs/
+    └── adr/                            # Architecture Decision Records
+        ├── README.md                   # ADR index
+        ├── TEMPLATE.md                 # ADR template
+        ├── 001-backend-cqrs-with-mediatr.md
+        ├── 002-csharp-coding-standards.md
+        ├── 003-typescript-angular-coding-standards.md
+        ├── 004-error-handling-strategy.md
+        ├── 005-logging-strategy.md
+        ├── 006-technology-stack.md
+        ├── 007-authentication-authorization-strategy.md
+        ├── 008-api-design-standards.md
+        ├── 009-database-migration-strategy.md
+        ├── 010-testing-strategy.md
+        ├── 011-cicd-pipeline-design.md
+        └── 012-angular-state-management.md
 ```
 
-### SoftAI-Example/ - Example Application Code
+### Project Implementations (Separate Workspaces)
+
+Example: **SoftAI-Example/** (DVD Rental System)
 ```
-SoftAI-Example/                         # Example application (separate workspace)
-├── src/                                # Source code
-│   ├── [Project].API/                  # Web API project
+SoftAI-Example/                         # Project implementation
+├── .context/                           # Project-specific tracking
+│   ├── PROJECT_STATE.md                # Project status
+│   ├── WORK_LOG.md                     # Development history
+│   ├── requirements/                   # Project requirements
+│   │   ├── BUSINESS_REQUIREMENTS.md
+│   │   ├── user-stories/
+│   │   └── domain-model.md
+│   └── sprints/                        # Sprint plans
+│       └── sprint-0/
+│           └── SPRINT_0_PLAN.md
+│
+├── src/                                # Application source code
+│   ├── [Project].API/                  # ASP.NET Core Web API
 │   ├── [Project].Core/                 # Domain entities
-│   ├── [Project].Application/          # Business logic (CQRS)
-│   └── [Project].Infrastructure/       # Data access, external services
+│   ├── [Project].Application/          # CQRS handlers
+│   └── [Project].Infrastructure/       # EF Core, data access
 │
-├── tests/                              # Tests
-│   ├── [Project].UnitTests/            # Unit tests
-│   └── [Project].IntegrationTests/     # Integration tests
+├── tests/                              # Test projects
+│   ├── [Project].UnitTests/
+│   └── [Project].IntegrationTests/
 │
-├── frontend/                           # Angular application
-│   ├── src/
-│   │   ├── app/                        # Application code
-│   │   └── assets/                     # Static assets
-│   └── angular.json                    # Angular workspace config
-│
-├── .github/workflows/                  # CI/CD pipelines
-├── docker-compose.yml                  # Local development environment
-└── README.md                           # Application documentation
+└── frontend/                           # Angular applications
+    ├── customer-portal/                # External portal
+    └── back-office/                    # Internal portal
 ```
-
-**Note**: The agent system (SoftAI) and example application (SoftAI-Example) are kept in separate workspace folders for clear separation of concerns.
 
 ---
 
 ## 🚀 Getting Started
 
-### For Stakeholders & Product Owners
+### For Teams Using SoftAI
 
-**Starting Sprint 0 (Foundation)?**
+**Starting a New Project?**
 
-1. **Read** [Sprint 0 Collaboration Guide](.context/SPRINT_0_COLLABORATION_GUIDE.md)
-   - Understand what decisions are needed
-   - See the collaborative workflow options
-   - Review open questions that need your input
+1. **Create Project Workspace**
+   - Create new folder: `SoftAI-YourProject/`
+   - Copy `.context/` structure from `SoftAI-Example/`
+   - Update project-specific details
 
-2. **Answer Key Questions**:
-   - Database preference (PostgreSQL/SQL Server)
-   - Any existing coding standards to follow
+2. **Register Your Project**
+   - Add to `.context/PROJECT_STATE.md` in SoftAI framework
+   - Link to your project's context folder
+
+3. **Begin Sprint 0**
+   - Define requirements
+   - Plan architecture using ADRs as guide
+   - Set up project structure
+   - Configure development environment
+
+**See**: [SoftAI-Example](../SoftAI-Example/) for a complete working example (DVD Rental System)
+
+### For AI Agents
+
+**Starting Work on a Project?**
+
+1. **Read Framework Registry** (2 min)
+   - Open [.context/PROJECT_STATE.md](.context/PROJECT_STATE.md)
+   - Find your project in Active Projects list
+   - Note project folder location
+
+2. **Navigate to Project** (3 min)
+   - Go to project workspace folder
+   - Read project's `PROJECT_STATE.md`
+   - Review current sprint plan
+
+3. **Review Standards** (10-15 min)
+   - Read ADRs relevant to your work area (see [docs/adr/README.md](docs/adr/README.md))
+   - Review your agent definition in [.github/agents/](.github/agents/)
+   - Check workflow templates if needed
+
+4. **Start Working**
+   - Follow project's sprint backlog
+   - Update project context (not framework)
+   - Use framework workflows for collaboration
+
+**See**: [.context/README.md](.context/README.md) for complete workflow guide
    - Logging infrastructure requirements
    - Technology version constraints
 

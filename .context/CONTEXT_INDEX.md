@@ -1,6 +1,24 @@
-# Context Index
+# Context Index - SoftAI Framework
 
-**Quick reference guide to find information fast and minimize context window usage.**
+**Quick reference guide for the SoftAI framework and active projects.**
+
+---
+
+## ⚠️ IMPORTANT: Framework vs Project
+
+### This is the Framework Folder (SoftAI)
+Contains:
+- Agent definitions (`.github/agents/`)
+- Architecture standards (`docs/adr/`)
+- Workflow templates (`.context/workflows/`)
+- Sprint templates (`.context/sprints/`)
+
+### Active Project Locations
+**Actual project work** happens in separate workspace folders:
+
+| Project | Location | Status |
+|---------|----------|--------|
+| **DVD Rental System** | `../SoftAI-Example/` | 🟢 Active |
 
 ---
 
@@ -8,129 +26,140 @@
 
 ### New Agent Starting Work?
 
-1. Read [PROJECT_STATE.md](.context/PROJECT_STATE.md) (5 min) - Current state
-2. Skim this file for relevant documentation (2 min)
-3. Read only the sections below that relate to your current task
-4. Use semantic search if you need to find specific code
+1. **Identify Your Project**: Check [PROJECT_STATE.md](./PROJECT_STATE.md) for active projects
+2. **Navigate to Project Folder**: Go to `../SoftAI-Example/` (or relevant project)
+3. **Read Project Context** (5 min):
+   - Read `PROJECT_STATE.md` in the project folder
+   - Read current sprint plan
+   - Review relevant requirements
+4. **Review Framework Standards** (10-15 min):
+   - Read ADRs relevant to your work area below
+   - Review your agent definition in `.github/agents/`
+5. **Start Working**: Follow the project's sprint plan
 
 ### Estimated Time to Context
-- **Current State**: 5 minutes (PROJECT_STATE.md)
-- **Your Domain**: 10-15 minutes (read relevant sections below)
-- **Full Context**: Not needed! That's the point of this system.
+- **Project State**: 5 minutes (project's PROJECT_STATE.md)
+- **Your Domain**: 10-15 minutes (relevant ADRs + agent definition)
+- **Full Context**: Not needed! This system keeps context minimal.
 
 ---
 
-## 📁 Documentation Map
+## 📁 Framework Documentation Map
 
 ### Context Management (.context/)
-- **[PROJECT_STATE.md](.context/PROJECT_STATE.md)** - ⭐ START HERE - Current project state, sprint, delegations
-- **[SPRINT_TRACKER.md](.context/sprints/SPRINT_TRACKER.md)** - 🏃 Sprint backlog, progress, and metrics
-- **[WORK_LOG.md](.context/archive/WORK_LOG.md)** - Session history, what's been done
-- **[AGENT_HANDOFF_PROTOCOL.md](.context/workflows/AGENT_HANDOFF_PROTOCOL.md)** - How to hand off work between agents
-- **[AGENT_WORKFLOW_GUIDE.md](.context/workflows/AGENT_WORKFLOW_GUIDE.md)** - Complete workflow including delegation and escalation
-- **[DELEGATION_ESCALATION_FLOWS.md](.context/workflows/DELEGATION_ESCALATION_FLOWS.md)** - 📊 Visual diagrams of collaboration patterns
-- **[CONTEXT_INDEX.md](.context/CONTEXT_INDEX.md)** - This file
+- **[PROJECT_STATE.md](./PROJECT_STATE.md)** - ⭐ START HERE - Active projects registry
+- **[CONTEXT_INDEX.md](./CONTEXT_INDEX.md)** - This file
+- **[workflows/AGENT_WORKFLOW_GUIDE.md](./workflows/AGENT_WORKFLOW_GUIDE.md)** - Complete agent workflow
+- **[workflows/AGENT_HANDOFF_PROTOCOL.md](./workflows/AGENT_HANDOFF_PROTOCOL.md)** - How to hand off work
+- **[workflows/DELEGATION_ESCALATION_FLOWS.md](./workflows/DELEGATION_ESCALATION_FLOWS.md)** - Visual collaboration diagrams
+- **[sprints/SPRINT_TEMPLATE.md](./sprints/SPRINT_TEMPLATE.md)** - Template for sprint planning
+- **[archive/](./archive/)** - Historical framework development records
 
 ### Architecture Decisions (docs/adr/)
-- **[README.md](docs/adr/README.md)** - How to create and use ADRs
-- **[TEMPLATE.md](docs/adr/TEMPLATE.md)** - ADR template
-- **Active ADRs**: See docs/adr/README.md for index
+- **[README.md](../docs/adr/README.md)** - ADR index and how to use
+- **[TEMPLATE.md](../docs/adr/TEMPLATE.md)** - ADR template
+- **Active ADRs**: 12 architectural decisions covering all aspects
 
 ### Agent Instructions (.github/agents/)
-- **[instructor.agent.md](.github/agents/instructor.agent.md)** - Meta-agent for creating new agents
-- **[lead-software-engineer.agent.md](.github/agents/lead-software-engineer.agent.md)** - Lead engineer orchestrating work
-- **Team Agents**: See Agent Reference section below
+- **[instructor.agent.md](../.github/agents/instructor.agent.md)** - Meta-agent for creating new agents
+- **[lead-software-engineer.agent.md](../.github/agents/lead-software-engineer.agent.md)** - Lead engineer
+- **Team Agents**: Backend, Frontend, Database, QA, DevOps, Security, API Designer, Documentation, Product Manager, Code Reviewer
 
 ---
 
 ## 🎯 Find Information By Task
 
-### "I need to understand current status"
-→ Read: [PROJECT_STATE.md](.context/PROJECT_STATE.md)
+### "I need to see current project status"
+→ Read: [PROJECT_STATE.md](./PROJECT_STATE.md) for active projects list
+→ Then: Navigate to project folder and read its `PROJECT_STATE.md`
+
+**For DVD Rental System**: See [../SoftAI-Example/.context/PROJECT_STATE.md](../SoftAI-Example/.context/PROJECT_STATE.md)
 
 ### "I need to see current sprint and backlog"
-→ Read: [SPRINT_TRACKER.md](.context/sprints/SPRINT_TRACKER.md)
-→ Quick view: PROJECT_STATE.md → Current Sprint section
+→ Navigate to project folder: `../SoftAI-Example/`
+→ Read: `.context/sprints/sprint-X/SPRINT_X_PLAN.md`
+
+**For DVD Rental System**: [../SoftAI-Example/.context/sprints/sprint-0/SPRINT_0_PLAN.md](../SoftAI-Example/.context/sprints/sprint-0/SPRINT_0_PLAN.md)
 
 ### "I need to pick up a task from the sprint"
-→ Read: [SPRINT_TRACKER.md - Sprint 0 Backlog](.context/sprints/SPRINT_TRACKER.md#-sprint-0-backlog)
-→ Update task status: ⬜ → 🟡
-→ Update: PROJECT_STATE.md → Active Work
+→ Navigate to project: `../SoftAI-Example/`
+→ Read: `.context/sprints/sprint-X/SPRINT_X_PLAN.md`
+→ Update task status in project's sprint plan
+→ Log work in project's `WORK_LOG.md`
 
 ### "I need to delegate to another agent"
-→ Read: [AGENT_WORKFLOW_GUIDE.md - Agent-to-Agent Delegation](.context/workflows/AGENT_WORKFLOW_GUIDE.md#-agent-to-agent-delegation)  
-→ Visual: [DELEGATION_ESCALATION_FLOWS.md](.context/workflows/DELEGATION_ESCALATION_FLOWS.md)  
-→ Update: PROJECT_STATE.md → Pending Delegations section
+→ Read: [workflows/AGENT_WORKFLOW_GUIDE.md - Agent-to-Agent Delegation](./workflows/AGENT_WORKFLOW_GUIDE.md)
+→ Visual: [workflows/DELEGATION_ESCALATION_FLOWS.md](./workflows/DELEGATION_ESCALATION_FLOWS.md)
+→ Document delegation in project's sprint plan or work log
 
 ### "I disagree with another agent"
-→ Read: [AGENT_WORKFLOW_GUIDE.md - Conflict Resolution](.context/workflows/AGENT_WORKFLOW_GUIDE.md#️-conflict-resolution--escalation)  
-→ Visual: [Escalation Flow Diagram](.context/workflows/DELEGATION_ESCALATION_FLOWS.md#️-escalation-flow-conflict-resolution)  
-→ Update: PROJECT_STATE.md → Active Discussions section
+→ Read: [workflows/AGENT_WORKFLOW_GUIDE.md - Conflict Resolution](./workflows/AGENT_WORKFLOW_GUIDE.md)
+→ Visual: [Escalation Flow Diagram](./workflows/DELEGATION_ESCALATION_FLOWS.md)
+→ Follow escalation process, document in project context
 
 ### "I need to escalate a decision"
-→ Read: [Decision-Making Authority Levels](.context/AGENT_WORKFLOW_GUIDE.md#decision-making-authority-levels)  
-→ Visual: [Decision Authority Matrix](.context/DELEGATION_ESCALATION_FLOWS.md#-decision-authority-matrix)  
-→ Update: PROJECT_STATE.md → Blockers section with escalation format
+→ Read: [Decision-Making Authority Levels](./workflows/AGENT_WORKFLOW_GUIDE.md)
+→ Visual: [Decision Authority Matrix](./workflows/DELEGATION_ESCALATION_FLOWS.md)
+→ Escalate to Lead Software Engineer
 
 ### "I need to see what's been completed"
-→ Read: [WORK_LOG.md](.context/WORK_LOG.md)
+→ Navigate to project: `../SoftAI-Example/`
+→ Read: `.context/WORK_LOG.md`
 
 ### "I need to understand an architectural decision"
-→ Read: Relevant ADR in [`docs/adr/`](docs/adr/)
-
 ### "I need to implement a backend feature"
-→ Read: 
-1. [backend-developer.agent.md](.github/agents/backend-developer.agent.md) - Your guidelines
-2. Relevant ADRs (architecture, backend, database)
-3. Existing code in `src/[Project].API/` and `src/[Project].Application/`
+→ Read:
+1. [../.github/agents/backend-developer.agent.md](../.github/agents/backend-developer.agent.md) - Your role
+2. Relevant ADRs: 001 (CQRS), 002 (C# Standards), 004 (Error Handling), 008 (API Design)
+3. Navigate to project code in `../SoftAI-Example/src/`
 
 ### "I need to implement a frontend feature"
 → Read:
-1. [frontend-developer.agent.md](.github/agents/frontend-developer.agent.md) - Your guidelines
-2. Relevant ADRs (frontend, API design)
-3. Existing code in frontend workspace
+1. [../.github/agents/frontend-developer.agent.md](../.github/agents/frontend-developer.agent.md) - Your role
+2. Relevant ADRs: 003 (TypeScript Standards), 012 (State Management), 008 (API Design)
+3. Navigate to project code in `../SoftAI-Example/frontend/`
 
 ### "I need to design database schema"
 → Read:
-1. [database-engineer.agent.md](.github/agents/database-engineer.agent.md) - Your guidelines
-2. Database ADRs
-3. Existing migrations and entity models
+1. [../.github/agents/database-engineer.agent.md](../.github/agents/database-engineer.agent.md) - Your role
+2. Relevant ADRs: 006 (Technology Stack), 009 (Database Migrations)
+3. Review project's domain model in requirements
 
 ### "I need to write tests"
 → Read:
-1. [qa-testing.agent.md](.github/agents/qa-testing.agent.md) - Your guidelines
-2. Testing ADRs
-3. Existing test files as examples
+1. [../.github/agents/qa-testing.agent.md](../.github/agents/qa-testing.agent.md) - Your role
+2. Relevant ADR: 010 (Testing Strategy)
+3. Navigate to project tests in `../SoftAI-Example/tests/`
 
 ### "I need to set up DevOps/CI/CD"
 → Read:
-1. [devops-engineer.agent.md](.github/agents/devops-engineer.agent.md) - Your guidelines
-2. DevOps ADRs
-3. Existing CI/CD configs
+1. [../.github/agents/devops-engineer.agent.md](../.github/agents/devops-engineer.agent.md) - Your role
+2. Relevant ADR: 011 (CI/CD Pipeline Design)
+3. Navigate to project CI/CD configs in `../SoftAI-Example/.github/workflows/`
 
 ### "I need to implement security features"
 → Read:
-1. [security-engineer.agent.md](.github/agents/security-engineer.agent.md) - Your guidelines
-2. Security ADRs
-3. Existing authentication/authorization code
+1. [../.github/agents/security-engineer.agent.md](../.github/agents/security-engineer.agent.md) - Your role
+2. Relevant ADR: 007 (Authentication & Authorization Strategy)
+3. Navigate to project security code
 
 ### "I need to review code"
 → Read:
-1. [code-reviewer.agent.md](.github/agents/code-reviewer.agent.md) - Your guidelines
-2. Coding standards ADRs
-3. The specific files under review
+1. [../.github/agents/code-reviewer.agent.md](../.github/agents/code-reviewer.agent.md) - Your role
+2. Relevant ADRs: 002 (C# Standards), 003 (TypeScript Standards)
+3. The specific files under review in project folder
 
 ### "I need to design an API"
 → Read:
-1. [api-designer.agent.md](.github/agents/api-designer.agent.md) - Your guidelines
-2. API design ADRs
-3. Existing OpenAPI specs
+1. [../.github/agents/api-designer.agent.md](../.github/agents/api-designer.agent.md) - Your role
+2. Relevant ADR: 008 (API Design Standards)
+3. Review project requirements and domain model
 
 ### "I need to write documentation"
 → Read:
-1. [documentation.agent.md](.github/agents/documentation.agent.md) - Your guidelines
-2. Documentation standards ADRs
-3. Existing documentation for style consistency
+1. [../.github/agents/documentation.agent.md](../.github/agents/documentation.agent.md) - Your role
+2. Relevant standards from ADRs
+3. Review existing project documentation for consistency
 
 ---
 
@@ -157,7 +186,9 @@
 
 ---
 
-## 🗂️ Project Structure Reference
+## 🗂️ Standard Project Structure
+
+Projects using SoftAI follow this structure:
 
 ### Backend Structure (C# .NET)
 ```
@@ -173,29 +204,28 @@ tests/
 
 ### Frontend Structure (Angular)
 ```
-src/
-├── app/
-│   ├── features/           # Feature modules (lazy loaded)
-│   ├── core/               # Singletons (services, guards, interceptors)
-│   ├── shared/             # Reusable components, pipes, directives
-│   └── models/             # TypeScript interfaces and types
+frontend/
+├── src/
+│   ├── app/
+│   │   ├── features/       # Feature modules (lazy loaded)
+│   │   ├── core/           # Singletons (services, guards, interceptors)
+│   │   ├── shared/         # Reusable components, pipes, directives
+│   │   └── models/         # TypeScript interfaces and types
 ```
 
-### Documentation Structure
-```
-docs/
-├── adr/                    # Architecture Decision Records
-├── api/                    # API documentation (OpenAPI specs)
-└── guides/                 # Developer guides, setup instructions
-```
-
-### Context Structure
+### Project Context Structure
 ```
 .context/
 ├── PROJECT_STATE.md        # Current project state
-├── WORK_LOG.md             # Session history
-├── AGENT_HANDOFF_PROTOCOL.md # Handoff procedures
-└── CONTEXT_INDEX.md        # This file
+├── WORK_LOG.md             # Development session history
+├── README.md               # Context folder guide
+├── requirements/           # All requirements
+│   ├── BUSINESS_REQUIREMENTS.md
+│   ├── user-stories/
+│   └── domain-model.md
+└── sprints/                # Sprint planning
+    └── sprint-X/
+        └── SPRINT_X_PLAN.md
 ```
 
 ---
