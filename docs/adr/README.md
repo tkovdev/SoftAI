@@ -81,6 +81,12 @@ Format: `NNN-topic-brief-description.md`
 - **[004-error-handling-strategy.md](004-error-handling-strategy.md)** - Result<T> pattern, RFC 7807 Problem Details, global exception handling
 - **[005-logging-strategy.md](005-logging-strategy.md)** - Serilog structured logging, log levels, what to log
 - **[006-technology-stack.md](006-technology-stack.md)** - .NET 10, Angular 21, SQL Server 2022, MSTest, package versions
+- **[007-authentication-authorization-strategy.md](007-authentication-authorization-strategy.md)** - Azure AD SSO, MSAL for Angular, Microsoft.Identity.Web, role-based authorization
+- **[008-api-design-standards.md](008-api-design-standards.md)** - RESTful conventions, versioning, pagination, error responses (RFC 7807)
+- **[009-database-migration-strategy.md](009-database-migration-strategy.md)** - EF Core migrations, naming conventions, deployment strategies
+- **[010-testing-strategy.md](010-testing-strategy.md)** - Testing pyramid, MSTest, Jasmine/Karma, Playwright, coverage requirements
+- **[011-cicd-pipeline-design.md](011-cicd-pipeline-design.md)** - GitHub Actions, Docker, multi-stage deployments, secrets management
+- **[012-angular-state-management.md](012-angular-state-management.md)** - Angular Signals, NgRx Signal Store, rxResource, state patterns
 
 ### Superseded Decisions
 
