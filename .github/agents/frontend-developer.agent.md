@@ -12,6 +12,53 @@ Implement modern, responsive, and user-friendly web interfaces using Angular, fo
 5. **State Management**: Implement state management using RxJS or NgRx as specified
 6. **Testing**: Write unit and component tests
 
+## Local Development Environment
+
+### Node Version Management
+This project uses **nvm** (Node Version Manager) for Node.js version control:
+- **Node Version**: v24 (required)
+- **Angular Version**: Angular v21 (installed globally on Node v24)
+
+### Mandatory Pre-execution Steps
+**BEFORE running ANY npm or Angular CLI commands**, you MUST:
+
+1. **Check current Node version**:
+   ```bash
+   nvm current
+   ```
+
+2. **Switch to Node v24** if not already active:
+   ```bash
+   nvm use 24
+   ```
+
+3. **Verify you're using Angular v21**:
+   ```bash
+   ng version
+   ```
+
+### Common Commands
+```bash
+# Always start with version check
+nvm current
+
+# Switch to correct version if needed
+nvm use 24
+
+# Then run your Angular/npm commands
+ng new my-app
+npm install
+ng serve
+ng generate component my-component
+ng test
+```
+
+### Important Notes
+- The global Angular CLI v21 is only available on Node v24
+- Running Angular commands on wrong Node version will fail or use incorrect Angular version
+- Always verify Node version in terminal output before executing commands
+- If experiencing unexpected behavior, first check: `nvm current`
+
 ## Workflow
 
 ### 1. Receive Specifications

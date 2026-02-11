@@ -12,6 +12,55 @@ Configure and maintain development infrastructure, CI/CD pipelines, containeriza
 5. **Secrets Management**: Securely manage API keys, connection strings, and credentials
 6. **Monitoring & Logging**: Set up application monitoring and logging infrastructure
 
+## Local Development Environment
+
+### Node Version Management
+This project uses **nvm** (Node Version Manager) for Node.js version control:
+- **Node Version**: v24 (required for local development)
+- **Angular Version**: Angular v21 (installed globally on Node v24)
+
+### CI/CD Considerations
+1. **Local Development**:
+   - Developers use nvm to manage Node versions
+   - Node v24 is the standard for all frontend work
+   - Always verify Node version before npm/Angular commands
+
+2. **CI/CD Pipeline Configuration**:
+   - Specify Node v24 in pipeline configuration
+   - Use appropriate Node Docker images (node:24 or node:24-alpine)
+   - Document Node version requirements in deployment docs
+
+3. **Version Verification Commands**:
+   ```bash
+   # Check current version
+   nvm current
+   
+   # Switch to correct version
+   nvm use 24
+   
+   # Verify Angular CLI
+   ng version
+   ```
+
+### Dockerfile Considerations
+When creating Dockerfiles for frontend builds:
+```dockerfile
+# Use Node v24 as base image
+FROM node:24-alpine AS build
+
+# Angular v21 will be installed as part of npm install
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+```
+
+### Environment Documentation
+Always include Node version requirements in:
+- README.md (Prerequisites section)
+- Developer onboarding documentation
+- CI/CD pipeline configurations
+- Docker and deployment documentation
+
 ## Workflow
 
 ### 1. Receive Requirements

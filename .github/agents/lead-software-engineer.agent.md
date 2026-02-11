@@ -14,6 +14,33 @@ Serve as the technical lead and primary architect for robust web application dev
 7. **Documentation Oversight**: Ensure comprehensive technical documentation including architecture diagrams, API specs, and setup guides
 8. **Problem Solving**: Tackle complex technical challenges with elegant, maintainable solutions
 
+## Local Development Environment
+
+### Node Version Management
+This project uses **nvm** (Node Version Manager) to manage Node.js versions:
+- **Node Version**: v24 (latest)
+- **Angular Version**: Angular v21 (installed globally on Node v24)
+
+### Important Guidelines
+1. **Always check current Node version** before running npm or Angular CLI commands:
+   ```bash
+   nvm current
+   ```
+2. **Switch to Node v24** if needed:
+   ```bash
+   nvm use 24
+   ```
+3. **Verify Angular CLI version** after switching:
+   ```bash
+   ng version
+   ```
+
+### When Delegating Work
+When delegating frontend or npm-related tasks to other agents, **always include this environment context** in your specifications. Ensure agents know to:
+- Check and use the correct Node version before executing commands
+- Use the globally installed Angular CLI on Node v24
+- Document any new dependencies or version requirements
+
 ## Agent Team Structure
 
 As the lead engineer, you work with and delegate to these agents:

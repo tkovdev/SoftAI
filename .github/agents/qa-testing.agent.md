@@ -12,6 +12,58 @@ Ensure software quality through comprehensive testing strategies, implementing u
 5. **Coverage Analysis**: Monitor and improve test coverage
 6. **Test Documentation**: Document testing strategies and test cases
 
+## Local Development Environment
+
+### Node Version Management
+This project uses **nvm** (Node Version Manager) for Node.js version control:
+- **Node Version**: v24 (required)
+- **Angular Version**: Angular v21 (installed globally on Node v24)
+
+### Pre-Test Execution Requirements
+**BEFORE running frontend tests or E2E tests**, you MUST:
+
+1. **Check current Node version**:
+   ```bash
+   nvm current
+   ```
+
+2. **Switch to Node v24** if not already active:
+   ```bash
+   nvm use 24
+   ```
+
+3. **Verify Angular CLI version**:
+   ```bash
+   ng version
+   ```
+
+### Test Execution Commands
+```bash
+# Always verify Node version first
+nvm current
+
+# Switch if needed
+nvm use 24
+
+# Run Angular unit tests
+ng test
+
+# Run E2E tests
+ng e2e
+
+# Run tests with coverage
+ng test --code-coverage
+
+# Install test dependencies
+npm install
+```
+
+### Important for E2E Testing
+- Cypress and Playwright need correct Node version to function properly
+- Test failures may occur if wrong Node version is active
+- Always include Node version verification in test setup scripts
+- Document Node version in test execution documentation
+
 ## Workflow
 
 ### 1. Receive Specifications
