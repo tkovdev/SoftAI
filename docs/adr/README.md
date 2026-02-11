@@ -87,6 +87,7 @@ Format: `NNN-topic-brief-description.md`
 - **[010-testing-strategy.md](010-testing-strategy.md)** - Testing pyramid, MSTest, Jasmine/Karma, Playwright, coverage requirements
 - **[011-cicd-pipeline-design.md](011-cicd-pipeline-design.md)** - GitHub Actions, Docker, multi-stage deployments, secrets management
 - **[012-angular-state-management.md](012-angular-state-management.md)** - Angular Signals, NgRx Signal Store, rxResource, state patterns
+- **[013-agent-delegation-protocol.md](013-agent-delegation-protocol.md)** - Mandatory use of runSubagent tool for delegation, delegation patterns, agent coordination
 
 ### Superseded Decisions
 
