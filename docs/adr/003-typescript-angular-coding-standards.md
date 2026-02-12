@@ -139,6 +139,52 @@ src/
 
 **One Component Per File**: Each component, service, directive, pipe in its own file
 
+### Component File Structure
+
+**REQUIRED: Separate Files for Templates and Styles**:
+
+All components **MUST** use separate files for templates and styles. Inline templates and styles are **strictly prohibited**.
+
+```typescript
+// ✅ CORRECT: Use templateUrl and styleUrl
+@Component({
+  selector: 'app-product-list',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './product-list.component.html',
+  styleUrl: './product-list.component.scss'
+})
+export class ProductListComponent { }
+```
+
+```typescript
+// ❌ INCORRECT: Never use inline template or styles
+@Component({
+  selector: 'app-product-list',
+  standalone: true,
+  imports: [CommonModule],
+  template: `<div>...</div>`,  // ❌ Prohibited
+  styles: [`div { color: red; }`]  // ❌ Prohibited
+})
+export class ProductListComponent { }
+```
+
+**Rationale**:
+- **Separation of Concerns**: Keeps logic, presentation, and styling clearly separated
+- **Maintainability**: Easier to read, edit, and review changes
+- **Tooling Support**: Better IDE support, syntax highlighting, and formatting
+- **Team Collaboration**: Easier for designers and developers to work in parallel
+- **Testability**: Simpler to test components when concerns are separated
+- **Best Practice**: Aligns with Angular Style Guide and industry standards
+
+**Required Files for Each Component**:
+```
+product-list.component.ts      # Component logic
+product-list.component.html    # Template
+product-list.component.scss    # Styles
+product-list.component.spec.ts # Unit tests
+```
+
 ### Angular 21 Standalone Components
 
 **Always Use Standalone Components**:
